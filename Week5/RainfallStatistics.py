@@ -16,6 +16,9 @@ def rainfall_amount_input():
     for each of the 12 months
     """
     user_input = float(input('What\'s the amount of rain fall? '))
+    # check if negative value was entered.
+    while user_input<0:
+        user_input = float(input('You entered a negative value, try again? '))
     return user_input
 
 
@@ -51,11 +54,11 @@ def main():
     total_rainfall = year_total(annual_rainfall)
     average = average_monthly(annual_rainfall)
     minimum, maximum = min_max(annual_rainfall)
-    print("Total rain for the year {}".format(total_rainfall))
+    print("\nTotal rain for the year {}".format(total_rainfall))
     print("Monthly average: {:.2f}".format(average))
-    print("Month {} had the minimum of {}".
+    print("Month {} had the minimum value of {}".
           format(annual_rainfall.index(minimum)+1, minimum))
-    print("Month {} had the maximum of {}".
+    print("Month {} had the maximum value of {}".
           format(annual_rainfall.index(maximum)+1, maximum))
 if __name__ == "__main__":
     main()
