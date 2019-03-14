@@ -13,7 +13,7 @@ import random
 LENGTH = 7  # length of list
 MINIMUM = 0  # random integers starting point
 MAXIMUM = 9  # random integers ending point
-
+lotto_sequence_number = ['First','Second','Third','Fourth','Fifth','Sixth','Seventh'] 
 
 def random_generator():
     """The function will generate a random number"""
@@ -34,7 +34,7 @@ def main():
     final_list = list_random()
     # print out each element on it's own
     for i in range(LENGTH):
-        # format will be i+1 since we starting i @ 0
-        print("Element {} is {}".format(i+1, final_list[i]))
+        # formatting output
+        print("{} Number is>> {}".format(lotto_sequence_number[i], final_list[i]))
 if __name__ == "__main__":
     main()
